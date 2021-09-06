@@ -1,0 +1,22 @@
+//combine reducer function
+export const combineReducers = (...reducers) => (state, action) => {
+    for (let i = 0; i < reducers.length; i++) state = reducers[i](state, action)
+    return state
+}
+
+export const isEmpty = obj => {
+    for (let key in obj) {
+      if(obj.hasOwnProperty(key))
+          return false
+    }
+        return true
+}
+
+export const stringToHslColor = str => {
+    let hash = 0
+    for (let i = 0; i < str.length; i++) {
+      hash = str.charCodeAt(i) + ((hash << 5) - hash)
+    }
+    const h = hash % 360
+    return `hsl(${h}, 50%, 70%)`
+}

@@ -1,0 +1,1 @@
+export const GET_BILLINGS = 'GET_BILLINGS'

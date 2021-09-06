@@ -1,82 +1,118 @@
-import Head from 'next/head'
+import Layout from '../components/Layout'
 
-export default function Home() {
+const Home = () => {
+
+  const data = [
+    {"name": "Terrance LLC", "reason": "Upfront Payment", "amount": "+ N560,000.00", "code": "NV28900947"},
+    {"name": "Terrance LLC", "reason": "Upfront Payment", "amount": "+ N560,000.00", "code": "NV28900947"},
+    {"name": "Terrance LLC", "reason": "Upfront Payment", "amount": "+ N560,000.00", "code": "NV28900947"},
+    {"name": "Terrance LLC", "reason": "Upfront Payment", "amount": "+ N560,000.00", "code": "NV28900947"},
+    {"name": "Terrance LLC", "reason": "Upfront Payment", "amount": "+ N560,000.00", "code": "NV28900947"},
+    {"name": "Terrance LLC", "reason": "Upfront Payment", "amount": "+ N560,000.00", "code": "NV28900947"},
+    {"name": "Terrance LLC", "reason": "Upfront Payment", "amount": "+ N560,000.00", "code": "NV28900947"},
+    {"name": "Terrance LLC", "reason": "Upfront Payment", "amount": "+ N560,000.00", "code": "NV28900947"},
+    {"name": "Terrance LLC", "reason": "Upfront Payment", "amount": "+ N560,000.00", "code": "NV28900947"},
+    {"name": "Terrance LLC", "reason": "Upfront Payment", "amount": "+ N560,000.00", "code": "NV28900947"},
+    {"name": "Terrance LLC", "reason": "Upfront Payment", "amount": "+ N560,000.00", "code": "NV28900947"},
+    {"name": "Terrance LLC", "reason": "Upfront Payment", "amount": "+ N560,000.00", "code": "0000000000"},
+  ]
+
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
-
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="p-3 font-mono text-lg bg-gray-100 rounded-md">
-            pages/index.js
-          </code>
-        </p>
-
-        <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+    <Layout title="home">
+      <div>
+        <button className="bg-gray-900 h-12 w-12 flex justify-center items-center rounded-md text-white fixed z-40 right-4 bottom-28">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+          </svg>
+        </button>
+        <div className="py-8">
+          <div className="flex items-center space-x-3 px-4 md:px-8">
+            <div className="w-12 h-12 rounded-full bg-gray-400"></div>
+            <div>
+              <h3 className="text-base font-medium">Hello Chris,</h3>
+              <div className="text-xs font-normal text-gray-500">Hope it's been a great day so far</div>
+            </div>
+          </div>
+          <div className="bg-black p-4 rounded-md mt-4 mx-4 md:mx-8">
+            <h4 className="text-gray-200 text-base border-b border-gray-200 pb-1">
+              Current Balance
+            </h4>
+            <div className="text-white flex items-baseline space-x-2 mt-8">
+              <span className="text-sm">NGN</span>
+              <span>450,000.00</span>
+            </div>
+          </div>
+          <div className="mt-6">
+            <div className="flex items-center justify-between px-4 md:px-8">
+              <h3 className="text-lg font-bold">Unpaid Invoices</h3>
+              <button className="text-sm text-gray-500">View All</button>
+            </div>
+            <section id="carousel">
+              <div className="carousel-wrp pl-4 md:pl-8">
+                <div className="bg-white rounded-md mr-4 min-w-64 p-4">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-12 h-12 rounded-full bg-gray-400"></div>
+                    <div>
+                      <h3 className="text-base font-medium">Terrance LLC</h3>
+                      <div className="text-sm font-normal text-gray-500">Due 13 Jul 2021</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-white rounded-md mr-4 min-w-64 p-4">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-12 h-12 rounded-full bg-gray-400"></div>
+                    <div>
+                      <h3 className="text-base font-medium">Terrance LLC</h3>
+                      <div className="text-sm font-normal text-gray-500">Due 13 Jul 2021</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-white rounded-md mr-4 min-w-64 p-4">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-12 h-12 rounded-full bg-gray-400"></div>
+                    <div>
+                      <h3 className="text-base font-medium">Terrance LLC</h3>
+                      <div className="text-sm font-normal text-gray-500">Due 13 Jul 2021</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-white rounded-md mr-4 min-w-64 p-4">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-12 h-12 rounded-full bg-gray-400"></div>
+                    <div>
+                      <h3 className="text-base font-medium">Terrance LLC</h3>
+                      <div className="text-sm font-normal text-gray-500">Due 13 Jul 2021</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
         </div>
-      </main>
-
-      <footer className="flex items-center justify-center w-full h-24 border-t">
-        <a
-          className="flex items-center justify-center"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
-        </a>
-      </footer>
-    </div>
+        <div className="px-4 md:px-8 pt-8 bg-white rounded-t-2xl">
+          <h3 className="text-lg font-bold mb-3">History</h3>
+          <span className="text-base">Today, 20 Jul</span>
+          <div className="pb-24">
+              {data.map((item, index) => (
+                <div key={index} className={`flex items-center justify-between ${index !== 0 && "border-t border-gray-200"}`}>
+                  <div className="flex items-center space-x-3 py-4">
+                    <div className="w-12 h-12 rounded-full bg-gray-400"></div>
+                    <div>
+                      <h3 className="text-base font-semibold">{item.name}</h3>
+                      <div className="text-xs font-normal text-gray-400">{item.reason}</div>
+                    </div>
+                  </div>
+                  <div className="text-right">
+                    <h3 className="text-base font-semibold">{item.amount}</h3>
+                    <div className="text-xs font-normal text-gray-400">{item.code}</div>
+                  </div>
+                </div>
+              ))}
+          </div>
+        </div>
+      </div>
+    </Layout>
   )
 }
+
+export default Home

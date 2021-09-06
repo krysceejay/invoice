@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+
+.carousel-wrp {
+  @apply flex items-center overflow-x-auto mt-4;
+}
+
+.carousel-wrp::-webkit-scrollbar {
+  @apply w-0;
+}
+
+@tailwind utilities;

@@ -1,0 +1,6 @@
+export const GET_POSTS = 'GET_POSTS'
+export const GET_POST = 'GET_POST'
+export const GET_CATEGORIES = 'GET_CATEGORIES'
+export const ADD_CATEGORY = 'ADD_CATEGORY'
+export const EDIT_CATEGORY = 'EDIT_CATEGORY'
+export const DELETE_CATEGORY = 'DELETE_CATEGORY'
