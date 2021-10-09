@@ -11,6 +11,9 @@ module.exports = {
       minWidth: {
         '64': '256px',
       },
+      colors: {
+        "form-text": "#929292",
+      },
     },
   },
   variants: {

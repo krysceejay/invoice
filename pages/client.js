@@ -1,6 +1,6 @@
 import {useEffect, useContext, useState} from 'react'
 import {DataContext} from '../store/globalState'
-import Layout from '../components/Layout'
+import Layout from '../components/layouts/Layout'
 import {
   GET_CLIENTS
 } from '../store/types/clientTypes'

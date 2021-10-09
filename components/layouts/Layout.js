@@ -1,5 +1,5 @@
 import Head from "next/head"
-import BottomTabs from "./BottomTabs"
+import BottomTabs from "../BottomTabs"
 
 const Layout = ({children, title}) => {
 

@@ -5,7 +5,7 @@ import {DataContext} from '../store/globalState'
 import {postData} from '../utils/fetchData'
 import Layout from '../components/layouts/AuthLayout'
 
-const Login = () => {
+const ResetPassword = () => {
 
   const [formData, setFormData] = useState({
     email: '',
@@ -32,8 +32,8 @@ const Login = () => {
     <Layout title="home">
       <div className="flex flex-col justify-end items-center h-screen">
         <div className="bg-white w-full rounded-t-3xl px-6 pt-14">
-          <h3 className="text-xl font-bold">Welcome back</h3>
-          <p className="text-base mt-3">Log into your account</p>
+          <h3 className="text-xl font-bold">Reset your password</h3>
+          <p className="text-base mt-3">Type in your email to reset your password</p>
           <form className="my-5">
             <div>
               <input 
@@ -41,19 +41,9 @@ const Login = () => {
               type="email" 
               placeholder="Email" />
             </div>
-            <div className="mt-6">
-              <input 
-              className="bg-gray-100 h-12 appearance-none border-2 border-gray-100 rounded-md w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-100" 
-              type="password" 
-              placeholder="Password" />
-            </div>
-            <Link 
-            href="/resetpassword">
-              <div className="text-right mt-2 text-form-text text-sm">Forgot password?</div>
-            </Link>
             <button class="bg-black text-white py-4 px-4 rounded-md focus:outline-none w-full mt-8" 
             type="button">
-              Log In
+              Reset Password
             </button>
             <span className="text-form-text mt-3 inline-block">
               Don’t have an account? <Link href="/signup"><strong className="text-black">Sign up here</strong></Link>
@@ -65,4 +55,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default ResetPassword

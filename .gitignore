@@ -19,6 +19,11 @@
 .DS_Store
 *.pem
 
+# mobile
+/android
+/ios
+/.gradle
+
 # debug
 npm-debug.log*
 yarn-debug.log*
